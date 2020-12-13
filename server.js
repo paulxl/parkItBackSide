@@ -13,9 +13,7 @@ server.use(bodyParser.json());
 server.use(cors());
 
 server.listen(PORT, () =>
-  console.log(
-    `Server running on flamingo juice and port ${process.env.NODE_ENV}  mode on port ${PORT} 🔥`
-  )
+  console.log(`Server running on flamingo juice and port ${PORT}   🔥`)
 );
 server.get("/", (req, res) => {
   res.sendFile(__dirname + "directory name");
