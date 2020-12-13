@@ -28,6 +28,15 @@ server.get("/connections", (req, res) => {
   res.send(connections.connectionCollections);
 });
 
+server.get("/connections/id/:id", (req, res) => {
+  const cId = req.params.id;
+
+  const result = connections.connectionCollections.filter(
+    (col) => col.cId === cId
+  );
+  res.send(result);
+});
+
 server.get("/connections/type/:type", (req, res) => {
   const type = req.params.type;
   const connection = req.body;
@@ -79,6 +88,7 @@ server.put("/connections/:id", (req, res) => {
 
 server.delete("/connections/:id", (req, res) => {
   const id = req.params.id;
+
   let colId = -1;
   connections.connectionCollections.map((col, idx) => {
     if (col.id === id) {
