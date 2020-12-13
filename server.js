@@ -28,7 +28,7 @@ server.get("/connections", (req, res) => {
   res.send(connections.connectionCollections);
 });
 
-server.get("/connections/:type", (req, res) => {
+server.get("/connections/type/:type", (req, res) => {
   const type = req.params.type;
   const connection = req.body;
   let tempArr = [];
