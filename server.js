@@ -29,29 +29,28 @@ server.get("/connections", (req, res) => {
 });
 
 server.get("/connections/id/:id", (req, res) => {
-  const cId = req.params.id;
+  const id = req.params.id;
+  let result = [];
+  console.log(id);
 
-  const result = connections.connectionCollections.filter(
-    (col) => col.cId === cId
-  );
+  for (let i = 0; i < connections.connectionCollections.length; i++) {
+    if (connections.connectionCollections[i].id == id) {
+      result.push(connections.connectionCollections[i]);
+    }
+  }
   res.send(result);
 });
 
 server.get("/connections/type/:type", (req, res) => {
   const type = req.params.type;
-  const connection = req.body;
   let tempArr = [];
-  //let result = connections.connectionCollections.filter((col)=> col.cType === type);
-  if (connection.type !== undefined) {
-    for (let i = 0; i < connections.connectionCollections.length; i++) {
-      if (collections.connectionCollections[i].type === type) {
-        tempArr.push(connections.connectionCollections[i]);
-      }
+
+  for (let i = 0; i < connections.connectionCollections.length; i++) {
+    if (connections.connectionCollections[i].type == type) {
+      tempArr.push(connections.connectionCollections[i]);
     }
-    res.send(tempArr);
-  } else {
-    res.send("no matches");
   }
+  res.send(tempArr);
 });
 
 server.post("/connections", (req, res) => {
@@ -62,28 +61,39 @@ server.post("/connections", (req, res) => {
 server.put("/connections/:id", (req, res) => {
   const id = req.params.id;
   const connection = req.body;
-  let result = connections.connectionCollections.filter(
-    (col) => col.cId === id
-  );
+  //let result = connections.connectionCollections.filter((col) => col.cId == id);
+  let result = [];
+  for (let i = 0; i < connections.connectionCollections.length; i++) {
+    if (connections.connectionCollections[i].id == id) {
+      result = connections.connectionCollections[i];
+    }
+  }
+  console.log("the results  " + result);
+
   if (connection.type !== undefined) {
-    result[0].type = connection.type;
+    console.log("inside 11");
+
+    result.type = connection.type;
+    console.log(result.type);
   }
   if (connection.organizer !== undefined) {
-    result[0].organizer = connection.organizer;
+    result.organizer = connection.organizer;
+    console.log(result.organizer);
   }
   if (connection.date1 !== undefined) {
-    result[0].date1 = connection.date1;
+    result.date1 = connection.date1;
   }
   if (connection.time1 !== undefined) {
-    result[0] = connection.time1;
+    result.time1 = connection.time1;
   }
   if (connection.trail !== undefined) {
-    result[0] = connection.trail;
+    result.trail = connection.trail;
   }
   if (connection.meetLocation !== undefined) {
-    result[0] = connection.meetLocation;
+    result.meetLocation = connection.meetLocation;
   }
-  res.send(result[0]);
+
+  res.send(result);
 });
 
 server.delete("/connections/:id", (req, res) => {
