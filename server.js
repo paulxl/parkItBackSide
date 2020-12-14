@@ -5,9 +5,14 @@ const server = express();
 const PORT = process.env.PORT || 3000;
 
 const connections = require("./testDataFiles/connections");
-//const connArr = [];
+const fedParks = require("./testDataFiles/fedParks");
+console.log("fed parks are " + fedParks);
 
-//const fedParks = require("./fedParks");
+const localParks = require("./testDataFiles/otherParks");
+console.log("local parks are " + localParks);
+
+const stateParks = require("./testDataFiles/stateParks");
+console.log("state parks are  " + stateParks);
 
 server.use(bodyParser.json());
 server.use(cors());
@@ -19,10 +24,7 @@ server.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
 
-//console.log("here i am " + connections.connectionCollections.length);
-//console.log(connections.connectionCollections);
-
-// TODO GET, POST, PUT, DELETE routes
+//  GET, POST, PUT, DELETE routes for Connections
 
 server.get("/connections", (req, res) => {
   res.send(connections.connectionCollections);
@@ -112,4 +114,19 @@ server.delete("/connections/:id", (req, res) => {
   }
   connections.connectionCollections.splice(colId, 1);
   res.send({ success: "Success" });
+});
+
+// GET routes for fedParks  // works
+server.get("/fedParks", (req, res) => {
+  res.send(fedParks.fedParksCollection);
+});
+
+// GET routes for localParks // works
+server.get("/localParks", (req, res) => {
+  res.send(localParks.localParks);
+});
+
+// GET routes for state parks
+server.get("/stateParks", (req, res) => {
+  res.send(stateParks.stateP);
 });

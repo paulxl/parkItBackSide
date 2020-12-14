@@ -1,4 +1,4 @@
-const FedParks = [
+const fedParksCollection = [
   {
     name: "Ebey's Landing National Historical Reserve",
     lat: "48.21403036",
@@ -95,4 +95,4 @@ const FedParks = [
     url: "https://www.nps.gov/sajh/index.htm",
   },
 ];
-module.exports = { FedParks };
+module.exports = { fedParksCollection };
