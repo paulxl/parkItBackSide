@@ -4,6 +4,7 @@ const cors = require("cors");
 const server = express();
 const PORT = process.env.PORT || 3000;
 
+server.use(cors());
 const connections = require("./testDataFiles/connections");
 const fedParks = require("./testDataFiles/fedParks");
 console.log("fed parks are " + fedParks);
