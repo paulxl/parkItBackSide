@@ -639,6 +639,55 @@ const localParks = [
     COUNTY: "Asotin",
     geometry: { paths: [-117.17380144726805, 46.075494448479368] },
   },
+  {
+    TR_NM: "Lake Wilderness Park Trails",
+    BICYCLE: "Yes",
+    HIKER_PEDESTRIAN: "Yes",
+    COUNTY: "King",
+    geometry: { paths: [-122.04181364470519, 47.380784532100826] },
+  },
+  {
+    TR_NM: "Lower Elkspur",
+    BICYCLE: "Unknown",
+    HIKER_PEDESTRIAN: "Yes",
+    COUNTY: "Pierce",
+    geometry: { paths: [-122.19794580948529, 46.776227246343147] },
+  },
+  {
+    TR_NM: "High Drive",
+    BICYCLE: "Unknown",
+    HIKER_PEDESTRIAN: "Yes",
+    COUNTY: "Spokane",
+    geometry: { paths: [-117.43335135523489, 47.635163938613694] },
+  },
+  {
+    TR_NM: "Olympic Discovery Trail",
+    BICYCLE: "Yes",
+    HIKER_PEDESTRIAN: "Yes",
+    COUNTY: "Clallam",
+    geometry: { paths: [-123.34681857124461, 48.106808357542477] },
+  },
+  {
+    TR_NM: "Big Rock Garden Trail ",
+    BICYCLE: "Yes",
+    HIKER_PEDESTRIAN: "Yes",
+    COUNTY: "Whatcom",
+    geometry: { paths: [-122.42121932320454, 48.768605456518657] },
+  },
+  {
+    TR_NM: "Birch Bay",
+    BICYCLE: "Unknown",
+    HIKER_PEDESTRIAN: "Yes",
+    COUNTY: "Whatcom",
+    geometry: { paths: [-122.7699335987035, 48.903042478561879] },
+  },
+  {
+    TR_NM: "Lake To Lake Trail",
+    BICYCLE: "Yes",
+    HIKER_PEDESTRIAN: "Yes",
+    COUNTY: "King",
+    geometry: { paths: [-122.15896071531887, 47.602025378641258] },
+  },
 ];
 
 module.exports = { localParks };

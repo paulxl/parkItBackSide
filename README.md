@@ -1,3 +1,7 @@
-### Just a basic back-end to route a team project thru
-###Test for Brad
-###Test for Randall
+
+#### This is a backside for data for a park locator project.
+
+##### Routes are as follows (note: more data may be added as time permits.)
+
+- '/connections
+

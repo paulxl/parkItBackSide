@@ -104,7 +104,7 @@ server.delete("/connections/:id", (req, res) => {
 
   let colId = -1;
   connections.connectionCollections.map((col, idx) => {
-    if (col.id === id) {
+    if (col.id == id) {
       // if true, found col to delete
       colId = idx;
       return;
