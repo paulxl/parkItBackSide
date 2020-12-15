@@ -1,7 +1,7 @@
 const connectionCollections = [
   {
     id: 1607883015633,
-    type: "hike",
+    type: "HIKE",
     organizer: "Wade Kellery",
     date1: "2020-12-24",
     time1: "08:00",
@@ -10,7 +10,7 @@ const connectionCollections = [
   },
   {
     id: 1607883620311,
-    type: "bike",
+    type: "BIKE",
     organizer: "Sue Evans",
     date1: "2020-12-20",
     time1: "09:00",
@@ -19,7 +19,7 @@ const connectionCollections = [
   },
   {
     id: 1607884022222,
-    type: "hike",
+    type: "HIKE",
     organizer: "Marty Robbins",
     date1: "2020-12-18",
     time1: "12:00",
@@ -28,7 +28,7 @@ const connectionCollections = [
   },
   {
     id: 1607887811122,
-    type: "run",
+    type: "RUN",
     organizer: "Randall Wade",
     date1: "2020-12-19",
     time1: "09:00",
@@ -37,7 +37,7 @@ const connectionCollections = [
   },
   {
     id: 1607870245632,
-    type: "bike",
+    type: "BIKE",
     organizer: "Peter Miserski",
     date1: "2020-12-21",
     time1: "08:30",
@@ -46,7 +46,7 @@ const connectionCollections = [
   },
   {
     id: 1607852365478,
-    type: "hike",
+    type: "HIKE",
     organizer: "Matt LaClare",
     date1: "2020-12-31",
     time1: "07:30",
@@ -55,7 +55,7 @@ const connectionCollections = [
   },
   {
     id: 1607883120115,
-    type: "run",
+    type: "RUN",
     organizer: "Guy Matiss",
     date1: "2020-12-31",
     time1: "08:00",
@@ -64,7 +64,7 @@ const connectionCollections = [
   },
   {
     id: 1607883265231,
-    type: "hike",
+    type: "HIKE",
     organizer: "Gina Parker",
     date1: "2020-12-24",
     time1: "08:00",
@@ -73,7 +73,7 @@ const connectionCollections = [
   },
   {
     id: 1607883054123,
-    type: "bike",
+    type: "BIKE",
     organizer: "Bobby McGee",
     date1: "2020-12-25",
     time1: "10:00",
@@ -82,7 +82,7 @@ const connectionCollections = [
   },
   {
     id: 1607882987452,
-    type: "hike",
+    type: "HIKE",
     organizer: "Steve Mongoose",
     date1: "2020-12-29",
     time1: "08:30",
