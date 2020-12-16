@@ -69,6 +69,8 @@ server.put("/connections/:id", (req, res) => {
   for (let i = 0; i < connections.connectionCollections.length; i++) {
     if (connections.connectionCollections[i].id == id) {
       result = connections.connectionCollections[i];
+    } else {
+      res.send("error bad id");
     }
   }
   console.log("the results  " + result);
