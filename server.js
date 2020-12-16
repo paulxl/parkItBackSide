@@ -69,8 +69,6 @@ server.put("/connections/:id", (req, res) => {
   for (let i = 0; i < connections.connectionCollections.length; i++) {
     if (connections.connectionCollections[i].id == id) {
       result = connections.connectionCollections[i];
-    } else {
-      result = `bad Id  ${id}`;
     }
   }
   console.log("the results  " + result);
@@ -98,7 +96,7 @@ server.put("/connections/:id", (req, res) => {
     result.meetLocation = connection.meetLocation;
   }
 
-  res.send(result);
+  res.send(" connected and updated " + result);
 });
 
 server.delete("/connections/:id", (req, res) => {
