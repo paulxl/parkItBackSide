@@ -70,7 +70,7 @@ server.put("/connections/:id", (req, res) => {
     if (connections.connectionCollections[i].id == id) {
       result = connections.connectionCollections[i];
     } else {
-      res.send("error bad id  " + id);
+      result = `bad Id  ${id}`;
     }
   }
   console.log("the results  " + result);
